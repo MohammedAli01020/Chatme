@@ -1,8 +1,23 @@
 <resources>
     <string name="app_name">Chatme</string>
 
+    <string name="firebase_web_host" translatable="false">chatme-61e5b</string>
     <string name="facebook_application_id" translatable="false">608676729503057</string>
     <!-- Facebook Application ID, prefixed by 'fb'. Enables Chrome Custom tabs. -->
     <string name="facebook_login_protocol_scheme" translatable="false">fb608676729503057</string>
     <string name="sign_up">Sign up</string>
+
+
+    <string name="please_enter_user_name">Please Enter User Name</string>
+    <string name="hint_register">Continue to register your account</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="required">required</string>
+    <string name="tab_chat">chat</string>
+    <string name="tab_friends">friends</string>
+    <string name="tab_notifications">notifications</string>
 </resources>
