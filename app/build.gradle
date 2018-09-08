@@ -38,6 +38,8 @@ dependencies {
     // Firebase storage
     implementation 'com.google.firebase:firebase-storage:16.0.1'
 
+    // FirebaseUI for Firebase Realtime Database
+    implementation 'com.firebaseui:firebase-ui-database:4.1.0'
     // Firebase database
     implementation 'com.google.firebase:firebase-database:16.0.1'
 

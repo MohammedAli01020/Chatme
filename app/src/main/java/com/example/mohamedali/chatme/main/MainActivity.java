@@ -23,6 +23,7 @@ import android.widget.TextView;
 
 import com.example.mohamedali.chatme.R;
 import com.example.mohamedali.chatme.login.LoginActivity;
+import com.example.mohamedali.chatme.users.UsersActivity;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -91,6 +92,12 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         switch (id) {
+
+            case R.id.action_users: {
+                startUsersActivity();
+                return true;
+            }
+
             case R.id.action_sign_up: {
                 signOut();
                 return true;
@@ -101,6 +108,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    private void startUsersActivity() {
+        startActivity(new Intent(this, UsersActivity.class));
+    }
+
     /**
      * sign out method
      */

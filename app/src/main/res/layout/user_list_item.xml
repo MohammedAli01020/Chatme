@@ -16,8 +16,15 @@
     <TextView
         android:id="@+id/tv_user_item_name"
         android:textColor="@color/colorPrimary"
-        android:layout_width="wrap_content"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         tools:text="Mohamed Ali" />
+
+    <Button
+        android:text="add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

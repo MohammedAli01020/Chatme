@@ -20,4 +20,5 @@
     <string name="tab_chat">chat</string>
     <string name="tab_friends">friends</string>
     <string name="tab_notifications">notifications</string>
+    <string name="users">All users</string>
 </resources>
