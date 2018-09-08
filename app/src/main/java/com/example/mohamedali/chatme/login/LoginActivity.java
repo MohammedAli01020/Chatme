@@ -2,6 +2,7 @@ package com.example.mohamedali.chatme.login;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -35,6 +36,8 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -43,6 +46,7 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
+import id.zelory.compressor.Compressor;
 
 public class LoginActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 123;
@@ -147,6 +151,7 @@ public class LoginActivity extends AppCompatActivity {
         Map<String, Object> updates = new HashMap();
 
         updates.put("/" + Concrete.getUid() + "/" + User.UID + "/", Concrete.getUid());
+        updates.put("/" + Concrete.getUid() + "/" + User.REGISTRATION_TOKEN + "/", Concrete.getRegistrationToken());
         updates.put("/" + Concrete.getUid() + "/" + User.USERNAME + "/", mUsernameEditText.getText().toString());
 
         mUsersDatabaseReference.updateChildren(updates).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -189,6 +194,7 @@ public class LoginActivity extends AppCompatActivity {
                 Uri selectedImageUri = data.getData();
 
                 if (selectedImageUri != null) {
+
                     showProgressDialog();
                     if (mAuth != null) {
                         final StorageReference photoRef = mUsersProfilePhotoStorageReference.child(Concrete.getUid());

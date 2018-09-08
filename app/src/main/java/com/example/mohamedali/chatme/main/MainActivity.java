@@ -20,7 +20,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.mohamedali.chatme.R;
 import com.example.mohamedali.chatme.login.LoginActivity;

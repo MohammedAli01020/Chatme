@@ -1,6 +1,7 @@
 package com.example.mohamedali.chatme.constanst;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 /**
  * Created by Mohamed Ali on 06/09/2018.
@@ -18,6 +19,10 @@ public final class Concrete {
 
     public static String getUid() {
         return FirebaseAuth.getInstance().getCurrentUser().getUid();
+    }
+
+    public static String getRegistrationToken() {
+        return FirebaseInstanceId.getInstance().getToken();
     }
 
 }
